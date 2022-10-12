@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="pi3">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/linen</item>
+    </style>
+
+    <style name="btn">
+        <item name="android:textColor">@color/linen</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">135dp</item>
+        <item name="android:layout_height">70dp</item>
+    </style>
+
+    <style name="txtInput">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:background">@color/linen</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+</resources>
