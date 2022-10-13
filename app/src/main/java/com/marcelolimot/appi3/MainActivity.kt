@@ -1,29 +1,50 @@
 package com.marcelolimot.appi3
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.marcelolimot.appi3.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setListeners()
-    }
-
-    private fun setListeners(){
 
 
-    }
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-    private fun logar(login: String, senha:String){
-        val login = login.toString()
-        val senha = senha.toString()
+        val btnLogin =binding.btnLogin
 
-        if((login == "admin") && (senha == "admin")){
+        btnLogin.setOnClickListener(){
+            val login = binding.txtlogin.text.toString()
+            val senha = binding.senha.text.toString()
+
+            if(login == "admin" && senha == "admin") {
+               logar()
+            }
+            else{
+                teste()
+            }
 
         }
+
     }
+
+
+    private fun logar(){
+        val intent = Intent(this, menu::class.java)
+        startActivity(intent)
+    }
+
+    private fun teste(){
+        val intent = Intent(this, teste::class.java)
+        startActivity(intent)
+    }
+
 
 
 }
