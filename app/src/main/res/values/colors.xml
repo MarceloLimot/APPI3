@@ -8,11 +8,15 @@
     <color name="black">#FF000000</color>
     <color name="blk75">#B2191919</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="cornflaw">#4C5270</color>
+    <color name="cornflaw">#454649</color>
     <color name="ivory">#EEEDE7</color>
     <color name="cinzachumbo">#837F7F</color>
     <color name="azul_celeste">#C6026795</color>
     <color name="linen">#BEBEBE</color>
     <color name="light_blue_500">#03A9F4</color>
     <color name="light_grey">#A0A0A0</color>
+    <color name="greenzone">#009688</color>
+    <color name="deep_orange">#FF5722</color>
+    <color name="pikachu">#CDDC39</color>
+
 </resources>

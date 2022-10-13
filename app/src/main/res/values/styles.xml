@@ -24,4 +24,73 @@
         <item name="android:layout_width">wrap_content</item>
     </style>
 
+    <style name="txtCadastro">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@color/linen</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:inputType">textPersonName</item>
+    </style>
+
+    <style name="textCadastro">
+        <item name="android:textSize">26dp</item>
+        <item name="android:textColor">@color/linen</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <style name="txtQuantidade">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">120dp</item>
+        <item name="android:background">@color/linen</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">number</item>
+    </style>
+
+
+    <style name="cartao">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="cardBackgroundColor">@color/purple_200</item>
+        <item name="cardCornerRadius">15dp</item>
+        <item name="cardElevation">10dp</item>
+    </style>
+
+    <style name="img_user">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="cardCornerRadius">30dp</item>
+
+    </style>
+
+    <style name="constrain">
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <style name="rbSexo">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/linen</item>
+    </style>
+
+    <style name="btnCadastrar" parent="">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+
+
+
 </resources>

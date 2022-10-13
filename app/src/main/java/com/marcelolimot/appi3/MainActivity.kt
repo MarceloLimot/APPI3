@@ -18,13 +18,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val btnLogin =binding.btnLogin
+        val login =binding.txtlogin.text.toString()
+
 
         btnLogin.setOnClickListener(){
             val login = binding.txtlogin.text.toString()
             val senha = binding.senha.text.toString()
 
             if(login == "admin" && senha == "admin") {
-               logar()
+                logar()
             }
             else{
                 teste()

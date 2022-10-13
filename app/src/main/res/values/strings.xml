@@ -13,4 +13,8 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="inserirSenha">********</string>
     <string name="inserirLogin">Login</string>
+
+    <string name="inserir_produto">Insira as informações do Produto</string>
+    <string name="sexo_m">Masculino</string>
+    <string name="sexo_f">Feminino</string>
 </resources>
