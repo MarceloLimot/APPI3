@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     tools:context=".MainActivity"
-    android:background="@color/black">
+    android:background="@drawable/gradient_backgroud">
 
 
 
@@ -37,7 +37,7 @@
 
 
     <EditText
-        android:id="@+id/senha"
+        android:id="@+id/txtsenha"
         style="@style/txtInput"
         android:layout_height="48dp"
         android:hint="@string/inserirSenha"
@@ -111,6 +111,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.568" />
+
+    <TextView
+        android:id="@+id/txtErro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/erroInput"
+        android:textColor="@color/deep_orange"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.778" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,4 +17,7 @@
     <string name="inserir_produto">Insira as informações do Produto</string>
     <string name="sexo_m">Masculino</string>
     <string name="sexo_f">Feminino</string>
+
+    <string name="erroInput">Usuario ou senha incorretos</string>
+    <string name="txtBtnCadastrar">Cadastrar</string>
 </resources>
