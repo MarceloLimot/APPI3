@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         val btnLogin =binding.btnLogin
         val btnRegistrar = binding.btnRegistrar
         val txtLogin = binding.txtlogin

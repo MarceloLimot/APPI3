@@ -9,108 +9,76 @@
     tools:context=".teste">
 
 
+    <View
+        android:id="@+id/view_card"
+        style="@style/ContainerComponents"
+        android:layout_width="350dp"
+        android:layout_height="390dp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="170dp" />
+
+
     <TextView
         android:id="@+id/textView4"
         style="@style/textCadastro"
+        android:layout_marginTop="4dp"
         android:text="@string/inserir_produto"
-        android:textAlignment="center"
         android:textColor="@color/linen"
         android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121" />
+        app:layout_constraintBottom_toTopOf="@+id/inputNome"
+        app:layout_constraintEnd_toEndOf="@+id/view_card"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/view_card"
+        app:layout_constraintTop_toTopOf="@+id/view_card"
+        app:layout_constraintVertical_bias="0.29" />
 
     <EditText
         android:id="@+id/inputQuantidade"
         style="@style/txtQuantidade"
+        android:layout_width="310dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:autofillHints="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.841"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.402" />
+        android:drawableRight="@drawable/ic_olho"
+        android:hint="********"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail"
+        tools:layout_editor_absoluteX="50dp" />
 
     <EditText
         android:id="@+id/inputNome"
         style="@style/txtCadastro"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301" />
+        android:layout_width="310dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Nome"
+        app:layout_constraintBottom_toTopOf="@+id/inputEmail"
+        app:layout_constraintEnd_toEndOf="@+id/view_card"
+        app:layout_constraintTop_toTopOf="@+id/view_card"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="319dp"
-        android:layout_height="159dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673">
+    <EditText
+        android:id="@+id/inputEmail"
+        style="@style/txtCadastro"
+        android:layout_width="310dp"
+        android:layout_height="49dp"
+        android:drawableRight="@drawable/ic_email"
+        android:hint="E-mail"
+        app:layout_constraintEnd_toEndOf="@+id/view_card"
+        app:layout_constraintStart_toStartOf="@+id/view_card"
+        tools:layout_editor_absoluteY="341dp" />
 
-        <TextView
-            android:id="@+id/textView3"
-            style="@style/textCadastro"
-            android:layout_width="match_parent"
-            android:text="Sexo:"
-            android:textSize="30sp" />
-
-        <RadioButton
-            android:id="@+id/radioMasc"
-            style="@style/rbSexo"
-            android:text="@string/sexo_m" />
-
-        <RadioButton
-            android:id="@+id/radioFemin"
-            style="@style/rbSexo"
-            android:text="@string/sexo_f" />
-
-    </RadioGroup>
-
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
         style="@style/btnCadastrar"
         android:text="@string/txtBtnCadastrar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.857" />
-
-    <TextView
-        android:id="@+id/txtNome"
-        style="@style/textCadastro"
-        android:text="Nome:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303"
-        tools:layout_conversion_absoluteHeight="35dp"
-        tools:layout_conversion_absoluteWidth="76dp"
-        tools:layout_marginTop="20dp" />
-
-    <TextView
-        android:id="@+id/txtQuantidade"
-        style="@style/textCadastro"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:text="Quantidade:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.149"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409"
-        tools:layout_marginTop="40dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/view_card"
+        app:layout_constraintEnd_toEndOf="@+id/view_card"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/view_card"
+        app:layout_constraintTop_toTopOf="@+id/view_card"
+        app:layout_constraintVertical_bias="0.965" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

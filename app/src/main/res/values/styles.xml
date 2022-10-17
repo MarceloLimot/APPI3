@@ -17,17 +17,20 @@
     </style>
 
     <style name="txtInput">
-        <item name="android:layout_height">30dp</item>
-        <item name="android:background">@color/linen</item>
+        <item name="android:background">@drawable/input_corner_radius</item>
         <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">10dp</item>
         <item name="android:ems">10</item>
+        <item name="android:layout_marginTop">20dp</item>
         <item name="android:layout_width">wrap_content</item>
     </style>
 
     <style name="txtCadastro">
         <item name="android:layout_height">50dp</item>
-        <item name="android:background">@color/linen</item>
+        <item name="android:background">@drawable/input_corner_radius</item>
         <item name="android:ems">10</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:inputType">textPersonName</item>
     </style>
@@ -37,18 +40,15 @@
         <item name="android:textColor">@color/linen</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:textAlignment">center</item>
-        <item name="layout_constraintStart_toStartOf">parent</item>
-        <item name="layout_constraintBottom_toBottomOf">parent</item>
-        <item name="layout_constraintEnd_toEndOf">parent</item>
-        <item name="layout_constraintTop_toTopOf">parent</item>
     </style>
 
     <style name="txtQuantidade">
         <item name="android:layout_height">50dp</item>
         <item name="android:layout_width">120dp</item>
-        <item name="android:background">@color/linen</item>
+        <item name="android:background">@drawable/input_corner_radius</item>
         <item name="android:ems">10</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
         <item name="android:inputType">number</item>
     </style>
 
@@ -84,14 +84,29 @@
 
     <style name="btnCadastrar" parent="btn">
         <item name="android:textStyle">normal</item>
+        <item name="android:layout_height">50dp</item>
         <item name="android:layout_width">140dp</item>
         <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/btn_backgroud</item>
     </style>
 
     <style name="imgBotao">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
     </style>
+
+    <style name="cardBackgroud">
+        <item name="android:layout_width">337dp</item>
+        <item name="android:layout_height">345dp</item>
+        <item name="android:background">@drawable/card_backgroud</item>
+    </style>
+
+    <style name="ContainerComponents">
+        <item name="android:layout_width">500dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/card_backgroud</item>
+    </style>
+
 
 
 

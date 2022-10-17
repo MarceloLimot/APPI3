@@ -14,10 +14,17 @@
     <string name="inserirSenha">********</string>
     <string name="inserirLogin">Login</string>
 
-    <string name="inserir_produto">Insira as informações do Produto</string>
+    <string name="inserir_produto">Insira seus dados:</string>
     <string name="sexo_m">Masculino</string>
     <string name="sexo_f">Feminino</string>
 
     <string name="erroInput">Usuario ou senha incorretos</string>
     <string name="txtBtnCadastrar">Cadastrar</string>
+
+    <string name="cad_produto">Insira os dados do produto:</string>
+    <string name="codProduto">Codigo:</string>
+    <string name="nomeProduto">Nome:</string>
+    <string name="qtdProduto">Quantidade:</string>
+    <string name="valorProduto">Valor:</string>
+    <string name="descProduto">Descrição:</string>
 </resources>

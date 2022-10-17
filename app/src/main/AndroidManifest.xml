@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Appi3.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".cad_produto"
+            android:exported="false" />
+        <activity
             android:name=".teste"
             android:exported="false" />
         <activity
