@@ -47,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         txtLogin.setOnClickListener(){
             binding.txtErro.visibility = View.INVISIBLE
         }
+
         
         txtSenha.setOnClickListener(){
             binding.txtErro.visibility = View.INVISIBLE

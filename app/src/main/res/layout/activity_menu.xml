@@ -10,72 +10,63 @@
 
     <SearchView
         android:id="@+id/searchView"
-        android:layout_width="321dp"
-        android:layout_height="61dp"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:background="@drawable/input_corner_radius"
         android:inputType="textPersonName"
-        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231"/>
+        app:layout_constraintVertical_bias="0.231" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        style="@style/cartao"
+
+    <ImageButton
+        android:id="@+id/btn_Add"
+        style="@style/botao_menu_add"
+        android:layout_marginEnd="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toEndOf="@+id/btn_EditAccount"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428" />
+
+
+    <ImageButton
+        android:id="@+id/btn_Report"
+        style="@style/botao_menu_report"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Sair"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_EditAccount"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btn_EditAccount"
+        style="@style/botao_menu_edit_account"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Add"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447">
+        app:layout_constraintVertical_bias="0.428" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            style="@style/imgBotao"
-            app:srcCompat="@drawable/ic_menu_camera" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
-        style="@style/cartao"
-        app:cardBackgroundColor="@color/deep_orange"
+    <ImageButton
+        android:id="@+id/btn_Sair"
+        style="@style/botao_menu_sair"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.172"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.745" />
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        style="@style/cartao"
-        app:cardBackgroundColor="@color/pikachu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.827"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.745">
-        <ImageView
-            style="@style/imgBotao"
-            app:srcCompat="@drawable/ic_sair"/>
-
-    </androidx.cardview.widget.CardView>
-
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
-        style="@style/cartao"
-        app:cardBackgroundColor="@color/greenzone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.827"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_Report"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Add"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.cardview.widget.CardView
         style="@style/img_user"
@@ -84,12 +75,12 @@
         app:layout_constraintHorizontal_bias="0.891"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" >
+        app:layout_constraintVertical_bias="0.04">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             style="@style/constrain"
-            android:layout_height="match_parent"
-            android:layout_width="wrap_content">
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/imgAvatar"
@@ -102,5 +93,6 @@
                 tools:srcCompat="@tools:sample/avatars" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

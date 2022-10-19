@@ -17,9 +17,12 @@
     <color name="light_grey">#A0A0A0</color>
     <color name="greenzone">#009688</color>
     <color name="deep_orange">#FF5722</color>
-    <color name="pikachu">#CDDC39</color>
     <color name="golden">#897b42</color>
     <color name="red_blood">#611700</color>
+    <color name="pikachu">#CDDC39</color>
+    <color name="charmander">#B64E3D</color>
+    <color name="squirtle">#378AAF</color>
+    <color name="bulbasaur">#377837</color>
     <color name="barro">#c65533</color>
     <color name="blue_marine">#0E1B42</color>
     <color name="greenhill">#076C6C</color>

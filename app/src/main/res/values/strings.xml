@@ -21,7 +21,7 @@
     <string name="erroInput">Usuario ou senha incorretos</string>
     <string name="txtBtnCadastrar">Cadastrar</string>
 
-    <string name="cad_produto">Insira os dados do produto:</string>
+    <string name="cad_produto">Dados do produto:</string>
     <string name="codProduto">Codigo:</string>
     <string name="nomeProduto">Nome:</string>
     <string name="qtdProduto">Quantidade:</string>
