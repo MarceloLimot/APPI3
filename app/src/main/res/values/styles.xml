@@ -153,6 +153,11 @@
         <item name="srcCompat">@drawable/ic_sair</item>
     </style>
 
+    <style name="txt_usuario_menu">
+        <item name="android:textColor">@color/linen</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
 
 
 

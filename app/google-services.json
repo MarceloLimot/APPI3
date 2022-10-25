@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1045539686191",
+    "project_id": "appi3-7e0c1",
+    "storage_bucket": "appi3-7e0c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045539686191:android:0f89b7775189ddca4c43da",
+        "android_client_info": {
+          "package_name": "com.marcelolimot.appi3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045539686191-9mh6s5tuf3dpdfpvktp0gvc6fn6514mb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHU-V1dAVNHBWhzLK5U7vy0vLUNUu-Bvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045539686191-9mh6s5tuf3dpdfpvktp0gvc6fn6514mb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

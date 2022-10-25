@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="@+id/view_card" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edit_Cod"
         style="@style/txtInput"
         android:layout_width="210dp"
         android:layout_height="38dp"
@@ -64,7 +64,7 @@
         app:layout_constraintVertical_bias="0.001" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine2"
+        android:id="@+id/edit_Desc"
         style="@style/txtInput"
         android:layout_width="190dp"
         android:layout_height="120dp"
@@ -79,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="@+id/view_card"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view_card"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Valor"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -89,10 +89,10 @@
         android:text="@string/codProduto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view_card"
-        app:layout_constraintVertical_bias="0.079" />
+        app:layout_constraintVertical_bias="0.08" />
 
     <TextView
         android:id="@+id/textDesc"
@@ -111,7 +111,7 @@
         android:text="@string/nomeProduto"
         app:layout_constraintBottom_toBottomOf="@+id/view_card"
         app:layout_constraintEnd_toEndOf="@+id/view_card"
-        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="@+id/view_card"
         app:layout_constraintTop_toTopOf="@+id/view_card"
         app:layout_constraintVertical_bias="0.276" />
@@ -139,7 +139,7 @@
         app:layout_constraintVertical_bias="0.402" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/edit_Valor"
         style="@style/txtInput"
         android:layout_width="140dp"
         android:layout_height="38dp"
@@ -153,11 +153,11 @@
         app:layout_constraintEnd_toEndOf="@+id/view_card"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view_card"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Qtd"
         app:layout_constraintVertical_bias="0.007" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/edit_Qtd"
         style="@style/txtInput"
         android:layout_width="140dp"
         android:layout_height="38dp"
@@ -171,11 +171,11 @@
         app:layout_constraintEnd_toEndOf="@+id/view_card"
         app:layout_constraintStart_toEndOf="@+id/textQtd"
         app:layout_constraintStart_toStartOf="@+id/view_card"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Nome"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/edit_Nome"
         style="@style/txtInput"
         android:layout_width="210dp"
         android:layout_height="38dp"
@@ -189,18 +189,18 @@
         app:layout_constraintEnd_toEndOf="@+id/view_card"
         app:layout_constraintStart_toEndOf="@+id/textNome"
         app:layout_constraintStart_toStartOf="@+id/view_card"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Cod"
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/btn_Cadastrar"
         style="@style/btnCadastrar1"
         android:layout_marginTop="20dp"
         android:text="@string/txtBtnCadastrar"
         app:layout_constraintBottom_toBottomOf="@+id/view_card"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Desc"
         app:layout_constraintVertical_bias="0.0" />
 
 

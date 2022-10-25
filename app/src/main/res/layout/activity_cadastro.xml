@@ -46,7 +46,7 @@
         app:layout_constraintVertical_bias="0.29" />
 
     <EditText
-        android:id="@+id/inputQuantidade"
+        android:id="@+id/inputSenha"
         style="@style/txtQuantidade"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="90dp"
@@ -54,7 +54,7 @@
         android:drawableRight="@drawable/ic_olho"
         android:hint="Senha"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Cadastrar"
         app:layout_constraintEnd_toEndOf="@+id/view_card"
         app:layout_constraintStart_toStartOf="@+id/view_card"
         app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
@@ -82,7 +82,7 @@
         app:layout_constraintTop_toTopOf="@+id/view_card" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/btn_Cadastrar"
         style="@style/btnCadastrar1"
         android:text="@string/txtBtnCadastrar"
         app:layout_constraintBottom_toBottomOf="@+id/view_card"
