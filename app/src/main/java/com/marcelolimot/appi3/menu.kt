@@ -29,7 +29,18 @@ class menu : AppCompatActivity() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
 
+        val usuario = FirebaseAuth.getInstance().uid.toString()
+
+        db.collection("Usuarios").document(usuario)
+            .addSnapshotListener{ documento, error ->
+                if(documento != null){
+                    binding.txtUsuario.text = documento.getString("nome")
+                }
+            }
+    }
 
 
     private fun add(){
