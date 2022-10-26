@@ -17,8 +17,13 @@ class menu : AppCompatActivity() {
         binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val btnEditAccount = binding.btnEditAccount
         val btnAdd = binding.btnAdd
         val btnSair = binding.btnSair
+
+        btnEditAccount.setOnClickListener(){
+            edit()
+        }
 
         btnAdd.setOnClickListener(){
             add()
@@ -42,6 +47,10 @@ class menu : AppCompatActivity() {
             }
     }
 
+    private fun edit(){
+        val intent = Intent(this, edit_user::class.java)
+        startActivity(intent)
+    }
 
     private fun add(){
         val intent = Intent(this, cad_produto::class.java)

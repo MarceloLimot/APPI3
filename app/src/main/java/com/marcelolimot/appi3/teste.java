@@ -106,10 +106,12 @@ public class teste extends Activity {
 
     private void SalvarDadosUsuario(){
         String nome= edit_Nome.getText().toString();
+        String email= edit_Email.getText().toString();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         Map<String, Object> usuarios = new HashMap<>();
         usuarios.put("nome",nome);
+        usuarios.put("email", email);
 
         usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 

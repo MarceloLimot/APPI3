@@ -58,6 +58,13 @@
         <item name="android:inputType">number</item>
     </style>
 
+    <style name="txtCardUser">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
 
     <style name="cartao">
         <item name="android:layout_width">150dp</item>
@@ -154,10 +161,22 @@
 
     <style name="card_user">
         <item name="android:background">@drawable/card_user</item>
+        <item name="srcCompat">@drawable/ic_person</item>
         <item name="android:layout_width">200dp</item>
         <item name="android:layout_height">200dp</item>
     </style>
 
+    <style name="icon_email">
+        <item name="android:background">@drawable/ic_email</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
+
+    <style name="icon_person">
+        <item name="android:background">@drawable/ic_person</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
 
 
 
