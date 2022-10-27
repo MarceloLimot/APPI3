@@ -166,6 +166,13 @@
         <item name="android:layout_height">200dp</item>
     </style>
 
+    <style name="btn_up_img">
+        <item name="android:background">@drawable/btn_rouded_cam</item>
+        <item name="srcCompat">@drawable/ic_menu_camera</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
     <style name="icon_email">
         <item name="android:background">@drawable/ic_email</item>
         <item name="android:layout_width">30dp</item>

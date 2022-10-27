@@ -1,6 +1,7 @@
 package com.marcelolimot.appi3;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -80,6 +81,8 @@ public class teste extends Activity {
                     edit_Nome.setText("");
                     edit_Email.setText("");
                     edit_Senha.setText("");
+
+                    sair();
                 }else{
                     String erro;
                     try{
@@ -129,6 +132,11 @@ public class teste extends Activity {
         });
     }
 
+    private void sair(){
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 
     private void IniciarComponentes(){
         edit_Nome = findViewById(R.id.inputNome);
