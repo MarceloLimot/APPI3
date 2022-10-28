@@ -41,88 +41,46 @@
 
         <EditText
             android:id="@+id/txtsenha"
-            style="@style/txtInput"
+            style="@style/txtInputLogin"
             android:layout_height="48dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
             android:drawableRight="@drawable/ic_olho"
             android:hint="@string/inserirSenha"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtlogin" />
 
         <EditText
             android:id="@+id/txtlogin"
-            style="@style/txtInput"
+            style="@style/txtInputLogin"
             android:layout_height="48dp"
             android:layout_marginTop="40dp"
-            android:layout_marginEnd="30dp"
             android:hint="@string/inserirLogin"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="92dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="40dp"
-            android:text="Login:"
-            android:textColor="@color/linen"
-            android:textSize="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
+
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnLogin"
-            style="@style/btnCadastrar"
+            style="@style/btnLogin"
             android:layout_marginTop="30dp"
-            android:layout_marginEnd="30dp"
-            android:text="Login"
+            android:text="@string/txt_btn_login"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnRegistrar"
-            app:layout_constraintHorizontal_bias="0.979"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtsenha"
             app:layout_constraintVertical_bias="0.0" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnRegistrar"
-            style="@style/btnCadastrar"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="45dp"
-            android:text="Registrar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtsenha" />
+
+
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="92dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
-            android:text="Senha:"
-            android:textColor="@color/linen"
-            android:textSize="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtlogin" />
-
-        <TextView
-            android:id="@+id/txtErro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="100dp"
-            android:text="@string/erroInput"
-            android:textColor="@color/deep_orange"
-            android:visibility="invisible"
+            android:id="@+id/lbl_criar"
+            style="@style/lbl_nova_conta"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

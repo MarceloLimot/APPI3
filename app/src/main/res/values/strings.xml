@@ -11,15 +11,17 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <string name="inserirSenha">********</string>
-    <string name="inserirLogin">Login</string>
+    <string name="inserirSenha">Senha</string>
+    <string name="inserirLogin">E-mail</string>
 
     <string name="inserir_produto">Insira seus dados:</string>
     <string name="sexo_m">Masculino</string>
     <string name="sexo_f">Feminino</string>
 
     <string name="erroInput">Usuario ou senha incorretos</string>
+    <string name="cadastrar_nova_conta">Não tem uma conta? Crie aqui!</string>
     <string name="txtBtnCadastrar">Cadastrar</string>
+    <string name="txt_btn_login">Entrar</string>
 
     <string name="cad_produto">Dados do produto:</string>
     <string name="codProduto">Codigo:</string>
@@ -27,5 +29,6 @@
     <string name="qtdProduto">Quantidade:</string>
     <string name="valorProduto">Valor:</string>
     <string name="descProduto">Descrição:</string>
+    <string name="salvarImg">Salvar Imagem</string>
 
 </resources>

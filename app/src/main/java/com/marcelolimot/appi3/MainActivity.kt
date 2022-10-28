@@ -28,10 +28,8 @@ class MainActivity : AppCompatActivity() {
 
 
         val btnLogin =binding.btnLogin
-        val btnRegistrar = binding.btnRegistrar
-        val txtLogin = binding.txtlogin
-        val txtSenha = binding.txtsenha
-        val login =binding.txtlogin.text.toString()
+        val lblCriar= binding.lblCriar
+
 
 
 
@@ -46,24 +44,16 @@ class MainActivity : AppCompatActivity() {
                 snackbar.setTextColor(Color.BLACK)
                 snackbar.show()
             }else{
-                binding.txtErro.visibility = View.INVISIBLE
                 AutenticarUsuario(binding.root)
             }
 
         }
 
-        btnRegistrar.setOnClickListener(){
+        lblCriar.setOnClickListener(){
             teste()
         }
 
-        txtLogin.setOnClickListener {
-            binding.txtErro.visibility = View.INVISIBLE
-        }
 
-        
-        txtSenha.setOnClickListener(){
-            binding.txtErro.visibility = View.INVISIBLE
-        }
 
 
 

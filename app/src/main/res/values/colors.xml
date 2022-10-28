@@ -7,6 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="blk75">#B2191919</color>
+    <color name="aaron">#373737</color>
     <color name="white">#FFFFFFFF</color>
     <color name="cornflaw">#454649</color>
     <color name="ivory">#EEEDE7</color>
@@ -27,4 +28,5 @@
     <color name="barro">#c65533</color>
     <color name="blue_marine">#0E1B42</color>
     <color name="greenhill">#076C6C</color>
+    <color name="viper">#b3ffab</color>
 </resources>

@@ -3,6 +3,7 @@ package com.marcelolimot.appi3
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.marcelolimot.appi3.databinding.ActivityMenuBinding
@@ -20,6 +21,7 @@ class menu : AppCompatActivity() {
         val btnEditAccount = binding.btnEditAccount
         val btnAdd = binding.btnAdd
         val btnSair = binding.btnSair
+        val btnAcc= binding.imgUser
 
         btnEditAccount.setOnClickListener(){
             edit()
@@ -32,17 +34,24 @@ class menu : AppCompatActivity() {
         btnSair.setOnClickListener(){
             sair()
         }
+
+        btnAcc.setOnClickListener(){
+            edit()
+        }
     }
 
     override fun onStart() {
         super.onStart()
 
+        val img_view = binding.imgUser
         val usuario = FirebaseAuth.getInstance().uid.toString()
 
         db.collection("Usuarios").document(usuario)
             .addSnapshotListener{ documento, error ->
                 if(documento != null){
                     binding.txtUsuario.text = documento.getString("nome")
+                    val imgUrl: String? = documento.getString("imgUrl")
+                    Glide.with(this).asBitmap().load(imgUrl).into(img_view)
                 }
             }
     }
@@ -60,8 +69,9 @@ class menu : AppCompatActivity() {
     private fun sair(){
         FirebaseAuth.getInstance().signOut();
         val intent = Intent(this, MainActivity::class.java)
+
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
-        finish()
     }
 
 
