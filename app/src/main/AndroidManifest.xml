@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Appi3.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".lista_produtos"
+            android:exported="false" />
+        <activity
             android:name=".edit_user"
             android:exported="false" />
         <activity

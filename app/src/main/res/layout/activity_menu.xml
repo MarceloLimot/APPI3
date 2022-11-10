@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/card_usuario" />
 
     <ImageButton
-        android:id="@+id/btn_Report"
+        android:id="@+id/btn_Lista"
         style="@style/botao_menu_report"
         android:layout_marginStart="40dp"
         android:layout_marginTop="30dp"

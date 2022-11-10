@@ -160,7 +160,6 @@ public class cad_produto extends AppCompatActivity {
         documentReference.set(produtos).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-
                 Log.d("db","Sucesso ao salvar os dados");
                 salvarImagem(cod);
                 //Sair();

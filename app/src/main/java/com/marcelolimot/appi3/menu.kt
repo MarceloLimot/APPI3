@@ -22,9 +22,14 @@ class menu : AppCompatActivity() {
         val btnAdd = binding.btnAdd
         val btnSair = binding.btnSair
         val btnAcc= binding.imgUser
+        val btnLista = binding.btnLista
 
         btnEditAccount.setOnClickListener(){
             edit()
+        }
+
+        btnLista.setOnClickListener(){
+            lista()
         }
 
         btnAdd.setOnClickListener(){
@@ -54,6 +59,11 @@ class menu : AppCompatActivity() {
                     Glide.with(this).asBitmap().load(imgUrl).into(img_view)
                 }
             }
+    }
+
+    private fun lista(){
+        val intent = Intent(this, lista_produtos::class.java)
+        startActivity(intent)
     }
 
     private fun edit(){
