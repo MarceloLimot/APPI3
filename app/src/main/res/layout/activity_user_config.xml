@@ -97,7 +97,6 @@
         android:id="@+id/btn_sair"
         style="@style/btnCadastrar1"
         android:text="Sair"
-        android:onClick="sair"
         android:layout_marginTop="30dp"
         app:layout_constraintStart_toEndOf="@+id/btn_editar"
         app:layout_constraintEnd_toEndOf="@+id/card_User"

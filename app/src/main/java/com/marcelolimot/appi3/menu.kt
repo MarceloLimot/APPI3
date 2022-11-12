@@ -61,6 +61,22 @@ class menu : AppCompatActivity() {
             }
     }
 
+    override fun onResume() {
+        super.onResume()
+        val img_view = binding.imgUser
+        val usuario = FirebaseAuth.getInstance().uid.toString()
+
+        db.collection("Usuarios").document(usuario)
+            .addSnapshotListener{ documento, error ->
+                if(documento != null){
+                    binding.txtUsuario.text = documento.getString("nome")
+                    val imgUrl: String? = documento.getString("imgUrl")
+                    Glide.with(this).asBitmap().load(imgUrl).into(img_view)
+                }
+            }
+    }
+
+
     private fun lista(){
         val intent = Intent(this, lista_produtos::class.java)
         startActivity(intent)
@@ -68,6 +84,7 @@ class menu : AppCompatActivity() {
 
     private fun edit(){
         val intent = Intent(this, edit_user::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
     }
 

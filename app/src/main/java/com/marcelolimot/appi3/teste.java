@@ -138,7 +138,7 @@ public class teste extends AppCompatActivity {
 
     private void salvarImagem(String uid){
         String filename = UUID.randomUUID().toString();
-        final StorageReference ref = FirebaseStorage.getInstance().getReference("/images/" + filename);
+        final StorageReference ref = FirebaseStorage.getInstance().getReference("/userimages/" + filename);
         ref.putFile(img_selecionada)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override

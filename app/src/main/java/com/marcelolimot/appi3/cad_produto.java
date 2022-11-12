@@ -20,30 +20,22 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.AggregateQuery;
 import com.google.firebase.firestore.AggregateQuerySnapshot;
 import com.google.firebase.firestore.AggregateSource;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.marcelolimot.appi3.model.produtos;
 
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -55,12 +47,14 @@ public class cad_produto extends AppCompatActivity {
     private Button btn_Cadastrar, btn_Atualizar;
     private ImageButton btn_upload;
     String[] mensagens = {"Preencha todos os campos!","Cadastro realizado com sucesso!", "Produto ja cadastrado!"};
-    String usuarioID,countProd;
+    String usuarioID, countProd , nomeImg, imgUrl;
     long qtdProd;
     private ImageView img_view;
     private Uri img_selecionada;
     List<produtos> listaProdutos;
+    private String[] strImg, urlImg, urlImgSplit;
     FirebaseFirestore db;
+    private StorageReference armazenamentoRef;
 
 
 
@@ -70,6 +64,8 @@ public class cad_produto extends AppCompatActivity {
         setContentView(R.layout.activity_cad_produto);
 
         IniciarComponentes();
+
+        armazenamentoRef = FirebaseStorage.getInstance().getReference();
 
         Intent cod= getIntent();
         Bundle b = cod.getExtras();
@@ -92,6 +88,16 @@ public class cad_produto extends AppCompatActivity {
             btn_Atualizar.setVisibility(View.VISIBLE);
             btn_Cadastrar.setEnabled(false);
             btn_Atualizar.setEnabled(true);
+
+            if(imgUrlExtra.length() > 0){
+                imgUrl = imgUrlExtra;
+                strImg = imgUrlExtra.split("/");
+                urlImg = strImg[7].split("%2F");
+                urlImgSplit = urlImg[1].split("\\?");
+                nomeImg = urlImgSplit[0];
+                //Log.i("String ImgUrlExtra", nomeImg);
+            }
+
 
             db = FirebaseFirestore.getInstance();
             db.collection("Produtos").document(codExtra)
@@ -209,7 +215,9 @@ public class cad_produto extends AppCompatActivity {
                         ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                             @Override
                             public void onSuccess(Uri uri) {
-                                Log.i("Teste", uri.toString());
+                                //Log.i("Teste", uri.toString());
+
+                                //excluirImagem();
 
                                 String codProd = cod;
                                 String imgUrl = uri.toString();
@@ -225,9 +233,27 @@ public class cad_produto extends AppCompatActivity {
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.e("Teste", e.getMessage(), e);
+                        Log.e("Erro", e.getMessage(), e);
                     }
                 });
+    }
+
+    private void excluirImagem(){
+        StorageReference imgRef = armazenamentoRef.child("/images/"+nomeImg);
+        imgRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                //Log.i("Concluido", "Imagem deletada com sucesso: "+ nomeImg);
+                //Log.i("imgRef", nomeImg);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                //Log.i("imgRef", String.valueOf(imgRef));
+                Log.e("Erro", e.getMessage(), e);
+            }
+        });
+
     }
 
 
@@ -295,6 +321,7 @@ public class cad_produto extends AppCompatActivity {
                 Log.d("db","Sucesso ao Atualizar os dados");
                 if(img_selecionada != null){
                     salvarImagem(cod);
+                    excluirImagem();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -329,7 +356,7 @@ public class cad_produto extends AppCompatActivity {
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
                 if(result.getResultCode() == Activity.RESULT_OK){
-                    Log.i("Teste","selecionou a imagem");
+                    //Log.i("Teste","selecionou a imagem");
                     Uri uri = result.getData().getData();
 
                     img_selecionada = uri;

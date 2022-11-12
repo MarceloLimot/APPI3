@@ -36,10 +36,12 @@ public class edit_user extends AppCompatActivity {
     private TextView edit_nome, edit_email;
     private Button btn_editar, btn_sair, btn_salvar_img;
     private ImageButton btn_upload;
-    private String usuario;
+    private String usuario, imgUrlExtra, nomeImg;
     private ImageView img_view;
     private Uri img_selecionada;
+    private String[] strImg, urlImg, urlImgSplit;
     private ViewTarget<ImageView, Bitmap> img_init;
+    private StorageReference armazenamentoRef;
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -47,6 +49,10 @@ public class edit_user extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_config);
+
+        IniciarComponentes();
+
+        armazenamentoRef = FirebaseStorage.getInstance().getReference();
 
         usuario =FirebaseAuth.getInstance().getUid().toString();
         db.collection("Usuarios").document(usuario).addSnapshotListener((value, error) ->{
@@ -56,6 +62,15 @@ public class edit_user extends AppCompatActivity {
                 String imgUrl= value.getString("imgUrl");
 
                 Glide.with(this).asBitmap().load(imgUrl).into(img_view);
+
+                imgUrlExtra = imgUrl;
+                if(imgUrlExtra.length() > 0){
+                    strImg = imgUrlExtra.split("/");
+                    urlImg = strImg[7].split("%2F");
+                    urlImgSplit = urlImg[1].split("\\?");
+                    nomeImg = urlImgSplit[0];
+                    //Log.i("String ImgUrlExtra", nomeImg);
+                }
             }
         });
 
@@ -70,16 +85,22 @@ public class edit_user extends AppCompatActivity {
         btn_salvar_img = findViewById(R.id.btn_salvar_img);
         btn_salvar_img.setOnClickListener(view ->{
             salvarImagem();
+            excluirImagem();
         });
 
-        IniciarComponentes();
+        btn_sair = findViewById(R.id.btn_sair);
+        btn_sair.setOnClickListener(view -> {
+            sair();
+        });
+
+
     }
 
     private void salvarImagem(){
 
         String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         String filename = UUID.randomUUID().toString();
-        final StorageReference ref = FirebaseStorage.getInstance().getReference("/images/" + filename);
+        final StorageReference ref = FirebaseStorage.getInstance().getReference("/userimages/" + filename);
         ref.putFile(img_selecionada)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
@@ -107,6 +128,25 @@ public class edit_user extends AppCompatActivity {
     }
 
 
+    private void excluirImagem(){
+        StorageReference imgRef = armazenamentoRef.child("//userimages/"+nomeImg);
+        imgRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                //Log.i("Concluido", "Imagem deletada com sucesso: "+ nomeImg);
+                //Log.i("imgRef", nomeImg);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                //Log.i("imgRef", String.valueOf(imgRef));
+                Log.e("Erro", e.getMessage(), e);
+            }
+        });
+
+    }
+
+
 
     /*@Override
     protected void onStart() {
@@ -124,11 +164,11 @@ public class edit_user extends AppCompatActivity {
         });
     }*/
 
-    public void sair(View v){
+    public void sair(){
         Intent intent = new Intent(this, menu.class);
         startActivity(intent);
-        finish();
     }
+
 
 
     private void IniciarComponentes(){
