@@ -110,6 +110,20 @@
         style="@style/btnCadastrar1"
         android:layout_marginTop="20dp"
         android:text="@string/txtBtnCadastrar"
+        android:visibility="visible"
+        android:enabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Desc"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Atualizar"
+        style="@style/btnCadastrar1"
+        android:layout_marginTop="20dp"
+        android:text="@string/txtBtnAtualizar"
+        android:visibility="invisible"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_Desc"

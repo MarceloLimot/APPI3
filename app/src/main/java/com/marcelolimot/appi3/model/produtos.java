@@ -7,10 +7,28 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 public class produtos {
+    private String cod;
     private String nome;
     private String qtd;
     private String valor;
     private String imgUrl;
+    private String desc;
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public String getCod() {
+        return cod;
+    }
+
+    public void setCod(String cod) {
+        this.cod = cod;
+    }
 
     public String getQtd() {
         return qtd;

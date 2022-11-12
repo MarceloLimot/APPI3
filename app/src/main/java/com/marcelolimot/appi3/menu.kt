@@ -79,7 +79,6 @@ class menu : AppCompatActivity() {
     private fun sair(){
         FirebaseAuth.getInstance().signOut();
         val intent = Intent(this, MainActivity::class.java)
-
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
     }

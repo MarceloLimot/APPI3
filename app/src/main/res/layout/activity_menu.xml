@@ -18,36 +18,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-
     <ImageButton
         android:id="@+id/btn_Add"
         style="@style/botao_menu_add"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_EditAccount"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Lista"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_usuario" />
 
     <ImageButton
         android:id="@+id/btn_Lista"
-        style="@style/botao_menu_report"
-        android:layout_marginStart="40dp"
+        style="@style/botao_lista"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_Sair"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_EditAccount"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_Add"
+        app:layout_constraintTop_toBottomOf="@+id/card_usuario" />
 
     <ImageButton
         android:id="@+id/btn_EditAccount"
         style="@style/botao_menu_edit_account"
         android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
         android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_Add"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Sair"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_usuario" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_Add"
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <ImageButton
         android:id="@+id/btn_Sair"
@@ -56,8 +56,8 @@
         android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btn_Report"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Add"
+        app:layout_constraintStart_toEndOf="@+id/btn_EditAccount"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Lista"
         app:layout_constraintVertical_bias="0.0" />
 
 

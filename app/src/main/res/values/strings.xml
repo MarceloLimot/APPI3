@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">appi3</string>
+    <string name="app_name">Uni Estoque</string>
     <string name="title_activity_add_item">AddItem</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -21,6 +21,7 @@
     <string name="erroInput">Usuario ou senha incorretos</string>
     <string name="cadastrar_nova_conta">Não tem uma conta? Crie aqui!</string>
     <string name="txtBtnCadastrar">Cadastrar</string>
+    <string name="txtBtnAtualizar">Atualizar</string>
     <string name="txt_btn_login">Entrar</string>
 
     <string name="cad_produto">Dados do produto:</string>

@@ -1,5 +1,6 @@
 package com.marcelolimot.appi3;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
@@ -68,6 +69,8 @@ public class lista_produtos extends AppCompatActivity {
             }
         });
 
+
+
         listaProdutos = new ArrayList<produtos>();
         produtoAdapter = new ProdutoAdapter(lista_produtos.this,listaProdutos);
 
@@ -77,8 +80,10 @@ public class lista_produtos extends AppCompatActivity {
 
     }
 
+
     private void EventChangeListener() {
-        db.collection("Produtos").orderBy("cod", Query.Direction.ASCENDING)
+        db.collection("Produtos").whereEqualTo("userCad",usuario)
+                .orderBy("cod", Query.Direction.ASCENDING)
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -87,6 +92,9 @@ public class lista_produtos extends AppCompatActivity {
                             return;
                         }
                         for(DocumentChange dc : value.getDocumentChanges()){
+                            if(dc.getType()==DocumentChange.Type.REMOVED){
+                                listaProdutos.remove(dc.getDocument().toObject(produtos.class));
+                            }
                             if(dc.getType()==DocumentChange.Type.ADDED){
                                 listaProdutos.add(dc.getDocument().toObject(produtos.class));
                             }

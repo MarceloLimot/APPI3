@@ -59,14 +59,13 @@
             tools:text="Valor" />
 
         <androidx.constraintlayout.utils.widget.ImageFilterButton
-            android:id="@+id/ic_edit"
-            android:src="@drawable/ic_edit_prod"
-            android:background="@drawable/btn_rounded"
+            android:id="@+id/btn_edit"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            />
+            android:background="@drawable/btn_rounded"
+            android:src="@drawable/ic_edit_prod" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
