@@ -41,7 +41,7 @@ public class lista_produtos extends AppCompatActivity {
     RecyclerView recyclerView;
     ProdutoAdapter produtoAdapter;
     FirebaseFirestore db;
-    ProgressDialog progressDialog;
+
 
     private ImageView imgUser;
     private TextView txtUsuario;

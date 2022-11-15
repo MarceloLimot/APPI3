@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Uni Estoque</string>
+    <string name="app_name">UniEstoque</string>
     <string name="title_activity_add_item">AddItem</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

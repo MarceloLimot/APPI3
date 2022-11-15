@@ -25,7 +25,7 @@ class menu : AppCompatActivity() {
         val btnLista = binding.btnLista
 
         btnEditAccount.setOnClickListener(){
-            edit()
+            grafico()
         }
 
         btnLista.setOnClickListener(){
@@ -76,6 +76,10 @@ class menu : AppCompatActivity() {
             }
     }
 
+    private fun grafico(){
+        val intent = Intent(this, grafico::class.java)
+        startActivity(intent)
+    }
 
     private fun lista(){
         val intent = Intent(this, lista_produtos::class.java)

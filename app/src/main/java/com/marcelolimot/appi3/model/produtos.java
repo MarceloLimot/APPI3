@@ -1,4 +1,6 @@
 package com.marcelolimot.appi3.model;
+import android.util.Log;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -9,7 +11,7 @@ import com.google.firebase.storage.UploadTask;
 public class produtos {
     private String cod;
     private String nome;
-    private String qtd;
+    private Integer qtd;
     private String valor;
     private String imgUrl;
     private String desc;
@@ -30,11 +32,11 @@ public class produtos {
         this.cod = cod;
     }
 
-    public String getQtd() {
+    public Integer getQtd() {
         return qtd;
     }
 
-    public void setQtd(String qtd) {
+    public void setQtd(Integer qtd) {
         this.qtd = qtd;
     }
 

@@ -78,7 +78,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="R$ 00,00"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="@+id/view_card"
         app:layout_constraintStart_toStartOf="@+id/view_card"
         app:layout_constraintTop_toBottomOf="@+id/edit_Qtd" />
@@ -88,7 +88,7 @@
         style="@style/txtCadastro1"
         android:layout_marginTop="10dp"
         android:hint="Qtd"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/view_card"
         app:layout_constraintStart_toStartOf="@+id/view_card"
         app:layout_constraintTop_toBottomOf="@+id/edit_Nome"

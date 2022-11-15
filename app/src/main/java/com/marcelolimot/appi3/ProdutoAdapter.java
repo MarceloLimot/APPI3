@@ -51,7 +51,7 @@ public class ProdutoAdapter extends RecyclerView.Adapter {
         String cod;
         String imgUrl = prod.getImgUrl();
         vhClass.txt_nome_Produto.setText(prod.getNome());
-        vhClass.txt_qtd_produto.setText(prod.getQtd());
+        vhClass.txt_qtd_produto.setText(prod.getQtd().toString());
         vhClass.txt_valor_produto.setText(prod.getValor());
         cod = prod.getCod();
 
@@ -68,7 +68,7 @@ public class ProdutoAdapter extends RecyclerView.Adapter {
                 //intent.putExtra("edit_Nome", prod.getNome());
                 intent.putExtra("cod", prod.getCod());
                 intent.putExtra("nome", prod.getNome());
-                intent.putExtra("qtd", prod.getQtd());
+                intent.putExtra("qtd", prod.getQtd().toString());
                 intent.putExtra("valor", prod.getValor());
                 intent.putExtra("desc", prod.getDesc());
                 intent.putExtra("imgUrl", prod.getImgUrl());
@@ -89,6 +89,8 @@ public class ProdutoAdapter extends RecyclerView.Adapter {
     public int getItemCount() {
         return listaProdutos.size();
     }
+
+
 
     public class ViewHolderClass extends RecyclerView.ViewHolder{
         public View context;

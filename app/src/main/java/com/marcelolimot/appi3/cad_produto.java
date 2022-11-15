@@ -261,7 +261,7 @@ public class cad_produto extends AppCompatActivity {
     private void CadastrarProduto(){
         String cod = edit_Cod.getText().toString();
         String nome= edit_Nome.getText().toString();
-        String qtd= edit_Qtd.getText().toString();
+        Integer qtd= Integer.valueOf(edit_Qtd.getText().toString());
         String valor = edit_Valor.getText().toString();
         String desc = edit_Desc.getText().toString();
         String uri_img = "";
@@ -299,7 +299,7 @@ public class cad_produto extends AppCompatActivity {
     private void AtualizarProduto(){
         String cod = edit_Cod.getText().toString();
         String nome= edit_Nome.getText().toString();
-        String qtd= edit_Qtd.getText().toString();
+        Integer qtd= Integer.valueOf(edit_Qtd.getText().toString());
         String valor = edit_Valor.getText().toString();
         String desc = edit_Desc.getText().toString();
         String uri_img = "";

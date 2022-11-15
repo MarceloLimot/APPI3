@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    style="@style/card_produto"
+    app:cardCornerRadius="12sp"
+    tools:showIn="@layout/activity_grafico">
+
+    <RelativeLayout
+        android:id="@+id/cartao"
+        android:layout_width="match_parent"
+        android:layout_marginStart="5sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginBottom="5sp"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/corProd"
+            style="@style/card_user"
+            android:layout_width="20sp"
+            android:layout_height="20sp" />
+
+        <TextView
+            android:id="@+id/txt_nome_Produto"
+            android:layout_width="120sp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/corProd"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/corProd"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="Produto" />
+
+        <TextView
+            android:id="@+id/txt_porcentagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/corProd"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="100" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
