@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:background="@drawable/gradient_backgroud"
     tools:context=".cad_produto">
 
@@ -11,20 +12,19 @@
     <View
         android:id="@+id/view_card"
         style="@style/ContainerComponents"
-        android:layout_width="350dp"
-        android:layout_height="550dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="@dimen/_410sdp"
+        android:layout_marginTop="@dimen/_77sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="@id/imgUser" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imgUser"
         style="@style/card_user"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="@dimen/_154sdp"
+        android:layout_height="@dimen/_154sdp"
+        android:layout_marginTop="@dimen/_40sdp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -38,13 +38,13 @@
     <TextView
         android:id="@+id/textView4"
         style="@style/textCadastro"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="@dimen/_8sdp"
         android:text="@string/cad_produto"
         android:textAlignment="center"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="@+id/view_card"
         app:layout_constraintStart_toStartOf="@+id/view_card"
-        app:layout_constraintTop_toTopOf="@+id/view_card" />
+        app:layout_constraintTop_toBottomOf="@+id/imgUser" />
 
     <EditText
         android:id="@+id/edit_Cod"
@@ -89,6 +89,7 @@
         android:layout_marginTop="10dp"
         android:hint="Qtd"
         android:inputType="number"
+        android:drawableRight="@drawable/ic_edit_qtd"
         app:layout_constraintEnd_toEndOf="@+id/view_card"
         app:layout_constraintStart_toStartOf="@+id/view_card"
         app:layout_constraintTop_toBottomOf="@+id/edit_Nome"
@@ -108,7 +109,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Cadastrar"
         style="@style/btnCadastrar1"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="@string/txtBtnCadastrar"
         android:visibility="visible"
         android:enabled="true"
@@ -120,7 +121,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Atualizar"
         style="@style/btnCadastrar1"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="@string/txtBtnAtualizar"
         android:visibility="invisible"
         android:enabled="false"
@@ -129,5 +130,19 @@
         app:layout_constraintTop_toBottomOf="@+id/edit_Desc"
         app:layout_constraintVertical_bias="0.0" />
 
+    <!--
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_edit"
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_26sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        android:enabled="false"
+        app:layout_constraintTop_toTopOf="@+id/edit_Qtd"
+        app:layout_constraintEnd_toEndOf="@+id/edit_Qtd"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_Qtd"/>
+-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

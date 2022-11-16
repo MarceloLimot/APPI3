@@ -12,9 +12,9 @@
     <View
         android:id="@+id/card_produto"
         style="@style/card_produto"
-        android:layout_width="360sp"
-        android:layout_height="550sp"
-        android:layout_marginTop="150dp"
+        android:layout_width="@dimen/_278sdp"
+        android:layout_height="@dimen/_390sdp"
+        android:layout_marginTop="@dimen/_115sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -23,18 +23,18 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imgGrafico"
         style="@style/card_grafico"
-        android:layout_width="204dp"
-        android:layout_height="204dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="@dimen/_162sdp"
+        android:layout_height="@dimen/_162sdp"
+        android:layout_marginTop="@dimen/_39sdp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <org.eazegraph.lib.charts.PieChart
         android:id="@+id/pieChart"
-        android:layout_width="200sp"
-        android:layout_height="200sp"
-        android:layout_marginTop="52sp"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_160sdp"
+        android:layout_marginTop="@dimen/_40sdp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -43,22 +43,22 @@
     <TextView
         android:id="@+id/txtProduto"
         android:text="Produtos"
-        android:textSize="30sp"
+        android:textSize="@dimen/_20ssp"
         android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/card_produto"
         app:layout_constraintEnd_toEndOf="@id/card_produto"
         app:layout_constraintTop_toBottomOf="@id/imgGrafico"
-        android:layout_marginTop="10sp"/>
+        android:layout_marginTop="@dimen/_8sdp"/>
 
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_grafico"
-        android:layout_width="320sp"
-        android:layout_height="250sp"
-        android:layout_marginTop="10sp"
+        android:layout_width="@dimen/_246sdp"
+        android:layout_height="@dimen/_193sdp"
+        android:layout_marginTop="@dimen/_8sdp"
         tools:listitem="@layout/grafico_item"
         app:layout_constraintStart_toStartOf="@+id/card_produto"
         app:layout_constraintTop_toBottomOf="@id/txtProduto"
@@ -66,15 +66,30 @@
         />
 
     <TextView
-        android:id="@+id/txt_item1"
+        android:id="@+id/txt_item2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:textSize="16sp"
-        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/card_produto"
         app:layout_constraintEnd_toEndOf="@+id/card_produto"
         app:layout_constraintTop_toBottomOf="@id/recycler_grafico"
+        android:text="Total cadastrado no estoque:"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_8sdp"
+        />
+
+
+    <TextView
+        android:id="@+id/txt_item1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/card_produto"
+        app:layout_constraintEnd_toEndOf="@+id/card_produto"
+        app:layout_constraintTop_toBottomOf="@id/txt_item2"
         android:text="teste"
         android:textAlignment="center"
         android:layout_marginStart="10sp"
@@ -82,31 +97,7 @@
 
 
 
-    <ImageButton
-        android:id="@+id/btn_edit_prod"
-        style="@style/btnProduto"
-        app:layout_constraintStart_toStartOf="@id/card_produto"
-        app:layout_constraintBottom_toBottomOf="@id/card_produto"/>
 
-    <ImageButton
-        android:id="@+id/btn_baixa"
-        style="@style/btnProduto"
-        android:src="@drawable/ic_baixa"
-        app:layout_constraintStart_toEndOf="@id/btn_edit_prod"
-        app:layout_constraintBottom_toBottomOf="@id/card_produto"/>
-
-
-    <ImageButton
-        android:id="@+id/btn_repor"
-        style="@style/btnProduto"
-        app:layout_constraintStart_toEndOf="@id/btn_baixa"
-        app:layout_constraintBottom_toBottomOf="@id/card_produto"/>
-
-    <ImageButton
-        android:id="@+id/btn_historico"
-        style="@style/btnProduto"
-        app:layout_constraintStart_toEndOf="@id/btn_repor"
-        app:layout_constraintBottom_toBottomOf="@id/card_produto"/>
 
 
 

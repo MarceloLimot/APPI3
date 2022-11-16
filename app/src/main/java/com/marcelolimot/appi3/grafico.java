@@ -36,8 +36,7 @@ public class grafico extends AppCompatActivity {
 
     PieChart pieChart;
     List<produtos> listaProdutos;
-    private EditText txtTeste;
-    TextView item1, item2, item3, item4;
+    TextView item1;
 
     RecyclerView recyclerView;
     GraficoAdapter graficoAdapter;
@@ -113,14 +112,11 @@ public class grafico extends AppCompatActivity {
                                 int hash = nome.hashCode();
                                 int hash2 = qtd.hashCode();
 
-                                Log.i("grafico.java", String.valueOf(hash));
-                                Log.i("graficoAdapter.java", String.valueOf(hash2));
-
                                 pieChart.addPieSlice(new PieModel(document.getString("nome"),
                                         Integer.parseInt(String.valueOf(document.getLong("qtd"))),
                                         Color.rgb(hash, hash2, 0)));
                             }
-                            item1.setText("Total de itens no estoque: "+String.valueOf(total));
+                            item1.setText(String.valueOf(total));
                         }
                         else{
                             Toast.makeText(getApplicationContext()

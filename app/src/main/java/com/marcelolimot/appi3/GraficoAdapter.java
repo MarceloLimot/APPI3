@@ -63,8 +63,8 @@ public class GraficoAdapter extends RecyclerView.Adapter {
         vhClass.txt_porcentagem.setText(String.valueOf(porcentagem) + " %");
         vhClass.corProd.setBackground(oval(cor,vhClass.corProd));
 
-        Log.i("graficoAdapter.java", String.valueOf(hash));
-        Log.i("graficoAdapter.java", String.valueOf(hash2));
+        //Log.i("graficoAdapter.java", String.valueOf(hash));
+        //Log.i("graficoAdapter.java", String.valueOf(hash2));
     }
 
 

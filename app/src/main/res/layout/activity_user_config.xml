@@ -7,12 +7,24 @@
     android:background="@drawable/gradient_backgroud"
     tools:context=".edit_user">
 
+
+    <View
+        android:id="@+id/card_User"
+        style="@style/ContainerComponents"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="@dimen/_270sdp"
+        android:layout_marginTop="@dimen/_77sdp"
+        app:layout_constraintTop_toTopOf="@+id/imgUser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imgUser"
         style="@style/card_user"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="@dimen/_154sdp"
+        android:layout_height="@dimen/_154sdp"
+        android:layout_marginTop="@dimen/_77sdp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -22,29 +34,6 @@
         style="@style/btn_up_img"
         app:layout_constraintBottom_toBottomOf="@+id/imgUser"
         app:layout_constraintEnd_toEndOf="@+id/imgUser"/>
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_salvar_img"
-        style="@style/btnCadastrar1"
-        android:text="@string/salvarImg"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/imgUser"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
-
-
-    <View
-        android:id="@+id/card_User"
-        style="@style/ContainerComponents"
-        android:layout_width="350dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@+id/btn_salvar_img"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
 
     <ImageView
         android:id="@+id/icon_email"
@@ -69,7 +58,7 @@
         style="@style/txtCardUser"
         android:textSize="24sp"
         android:layout_marginTop="40dp"
-        app:layout_constraintTop_toTopOf="@+id/card_User"
+        app:layout_constraintTop_toBottomOf="@+id/imgUser"
         app:layout_constraintStart_toStartOf="@+id/card_User"
         app:layout_constraintEnd_toEndOf="@+id/card_User"/>
 
@@ -85,10 +74,10 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_nome_usuario" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_editar"
+        android:id="@+id/btn_salvar_img"
         style="@style/btnCadastrar1"
-        android:text="Editar"
-        android:layout_marginTop="30dp"
+        android:text="@string/salvarImg"
+        android:layout_marginTop="@dimen/_23sdp"
         app:layout_constraintStart_toStartOf="@+id/card_User"
         app:layout_constraintEnd_toStartOf="@+id/btn_sair"
         app:layout_constraintTop_toBottomOf="@+id/card_User"/>
@@ -97,8 +86,8 @@
         android:id="@+id/btn_sair"
         style="@style/btnCadastrar1"
         android:text="Sair"
-        android:layout_marginTop="30dp"
-        app:layout_constraintStart_toEndOf="@+id/btn_editar"
+        android:layout_marginTop="@dimen/_23sdp"
+        app:layout_constraintStart_toEndOf="@+id/btn_salvar_img"
         app:layout_constraintEnd_toEndOf="@+id/card_User"
         app:layout_constraintTop_toBottomOf="@+id/card_User"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

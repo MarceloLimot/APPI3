@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+
+    </style>
 
     <style name="pi3">
         <item name="android:textSize">30sp</item>
@@ -265,6 +268,13 @@
         <item name="android:layout_marginStart">30sp</item>
         <item name="android:background">@drawable/btn_rounded</item>
         <item name="srcCompat">@drawable/ic_repor</item>
+    </style>
+
+    <style name="btnEditQtd">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/btn_rounded</item>
+        <item name="srcCompat">@drawable/ic_edit_qtd</item>
     </style>
 
 

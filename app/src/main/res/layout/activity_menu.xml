@@ -11,9 +11,9 @@
     <View
         android:id="@+id/card_usuario"
         style="@style/card_usuario"
-        android:layout_width="340dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="@dimen/_262sdp"
+        android:layout_height="@dimen/_116sdp"
+        android:layout_marginTop="@dimen/_54sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -21,9 +21,9 @@
     <ImageButton
         android:id="@+id/btn_Add"
         style="@style/botao_menu_add"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="@dimen/_31sdp"
+        android:layout_marginEnd="@dimen/_31sdp"
+        android:layout_marginTop="@dimen/_23sdp"
         app:layout_constraintEnd_toStartOf="@+id/btn_Lista"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_usuario" />
@@ -31,8 +31,8 @@
     <ImageButton
         android:id="@+id/btn_Lista"
         style="@style/botao_lista"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="@dimen/_23sdp"
+        android:layout_marginEnd="@dimen/_31sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_Add"
         app:layout_constraintTop_toBottomOf="@+id/card_usuario" />
@@ -40,37 +40,37 @@
     <ImageButton
         android:id="@+id/btn_EditAccount"
         style="@style/botao_menu_edit_account"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="@dimen/_31sdp"
+        android:layout_marginTop="@dimen/_23sdp"
+        android:layout_marginEnd="@dimen/_31sdp"
         app:layout_constraintEnd_toStartOf="@+id/btn_Sair"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Add"
-        app:layout_constraintVertical_bias="0.0" />
+      />
 
 
     <ImageButton
         android:id="@+id/btn_Sair"
         style="@style/botao_menu_sair"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="@dimen/_23sdp"
+        android:layout_marginEnd="@dimen/_31sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btn_EditAccount"
         app:layout_constraintTop_toBottomOf="@+id/btn_Lista"
-        app:layout_constraintVertical_bias="0.0" />
+      />
 
 
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imgUser"
         style="@style/card_user"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="90dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="@dimen/_77sdp"
+        android:layout_height="@dimen/_77sdp"
+        android:layout_marginTop="@dimen/_19sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
         app:layout_constraintEnd_toEndOf="@+id/card_usuario"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/card_usuario"
         tools:srcCompat="@tools:sample/avatars" />
 
 
@@ -80,11 +80,13 @@
         android:textColor="@color/linen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:layout_marginStart="20dp"
+        android:textSize="@dimen/_18ssp"
+        android:layout_marginStart="@dimen/_15sdp"
         android:text="Exemplo"
+        app:layout_constraintTop_toTopOf="@+id/card_usuario"
+        app:layout_constraintBottom_toBottomOf="@+id/card_usuario"
         app:layout_constraintStart_toStartOf="@+id/card_usuario"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

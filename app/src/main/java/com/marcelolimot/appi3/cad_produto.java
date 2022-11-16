@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -44,9 +45,9 @@ import java.util.UUID;
 public class cad_produto extends AppCompatActivity {
 
     private EditText edit_Cod, edit_Nome, edit_Qtd, edit_Valor, edit_Desc;
-    private Button btn_Cadastrar, btn_Atualizar;
+    private Button btn_Cadastrar, btn_Atualizar, btn_edit;
     private ImageButton btn_upload;
-    String[] mensagens = {"Preencha todos os campos!","Cadastro realizado com sucesso!", "Produto ja cadastrado!"};
+    String[] mensagens = {"Preencha todos os campos!","Cadastro realizado com sucesso!", "Produto ja cadastrado!", "Imagem Excluida com sucesso!"};
     String usuarioID, countProd , nomeImg, imgUrl;
     long qtdProd;
     private ImageView img_view;
@@ -86,8 +87,10 @@ public class cad_produto extends AppCompatActivity {
             edit_Cod.setEnabled(false);
             btn_Cadastrar.setVisibility(View.INVISIBLE);
             btn_Atualizar.setVisibility(View.VISIBLE);
+            //btn_edit.setVisibility(View.VISIBLE);
             btn_Cadastrar.setEnabled(false);
             btn_Atualizar.setEnabled(true);
+            //btn_edit.setEnabled(true);
 
             if(imgUrlExtra.length() > 0){
                 imgUrl = imgUrlExtra;
@@ -127,7 +130,7 @@ public class cad_produto extends AppCompatActivity {
                     btn_Atualizar.setVisibility(View.INVISIBLE);
                     btn_Cadastrar.setEnabled(true);
                     btn_Atualizar.setEnabled(false);
-                    Log.d(TAG, "Count: " + snapshot.getCount());
+                    //Log.d(TAG, "Count: " + snapshot.getCount());
                 } else {
                     Log.d(TAG, "Count failed: ", task.getException());
                 }
@@ -206,6 +209,8 @@ public class cad_produto extends AppCompatActivity {
 
 
     private void salvarImagem(String cod){
+
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         String filename = UUID.randomUUID().toString();
         final StorageReference ref = FirebaseStorage.getInstance().getReference("/images/" + filename);
         ref.putFile(img_selecionada)
@@ -239,10 +244,14 @@ public class cad_produto extends AppCompatActivity {
     }
 
     private void excluirImagem(){
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         StorageReference imgRef = armazenamentoRef.child("/images/"+nomeImg);
         imgRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
+                Toast.makeText(getApplicationContext()
+                        , "Imagem atualizada com sucesso!"
+                        ,Toast.LENGTH_SHORT).show();
                 //Log.i("Concluido", "Imagem deletada com sucesso: "+ nomeImg);
                 //Log.i("imgRef", nomeImg);
             }
@@ -307,15 +316,15 @@ public class cad_produto extends AppCompatActivity {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
 
-        Map<String, Object> produtos = new HashMap<>();
-        produtos.put("nome", nome);
-        produtos.put("qtd",qtd);
-        produtos.put("valor",valor);
-        produtos.put("desc",desc);
+        Map<String, Object> produtosUpdate = new HashMap<>();
+        produtosUpdate.put("nome", nome);
+        produtosUpdate.put("qtd",qtd);
+        produtosUpdate.put("valor",valor);
+        produtosUpdate.put("desc",desc);
 
 
         DocumentReference documentReference =db.collection("Produtos").document(cod);
-        documentReference.update(produtos).addOnSuccessListener(new OnSuccessListener<Void>() {
+        documentReference.update(produtosUpdate).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
                 Log.d("db","Sucesso ao Atualizar os dados");
@@ -342,6 +351,7 @@ public class cad_produto extends AppCompatActivity {
         btn_Cadastrar = findViewById(R.id.btn_Cadastrar);
         img_view = findViewById(R.id.imgUser);
         btn_Atualizar = findViewById(R.id.btn_Atualizar);
+        btn_edit = findViewById(R.id.btn_edit);
     }
 
     private void Sair(){

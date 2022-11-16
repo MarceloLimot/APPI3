@@ -174,7 +174,7 @@ public class edit_user extends AppCompatActivity {
     private void IniciarComponentes(){
         edit_nome =  findViewById(R.id.txt_nome_usuario);
         edit_email =  findViewById(R.id.txt_email_usuario);
-        btn_editar = findViewById(R.id.btn_editar);
+        btn_editar = findViewById(R.id.btn_salvar_img);
         btn_sair = findViewById(R.id.btn_sair);
         img_view = findViewById(R.id.imgUser);
         btn_salvar_img = findViewById(R.id.btn_salvar_img);

@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -23,13 +24,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
         val btnLogin =binding.btnLogin
         val lblCriar= binding.lblCriar
-
+        val txtSenha = binding.txtsenha
 
 
 
@@ -52,10 +55,6 @@ class MainActivity : AppCompatActivity() {
         lblCriar.setOnClickListener(){
             teste()
         }
-
-
-
-
 
     }
 

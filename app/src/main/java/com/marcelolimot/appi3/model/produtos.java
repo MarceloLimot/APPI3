@@ -15,6 +15,15 @@ public class produtos {
     private String valor;
     private String imgUrl;
     private String desc;
+    private String userCad;
+
+    public String getUserCad() {
+        return userCad;
+    }
+
+    public void setUserCad(String userCad) {
+        this.userCad = userCad;
+    }
 
     public String getDesc() {
         return desc;

@@ -21,8 +21,8 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgProd"
             style="@style/card_user"
-            android:layout_width="70dp"
-            android:layout_height="70dp"/>
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"/>
 
 
 
@@ -61,8 +61,8 @@
 
         <androidx.constraintlayout.utils.widget.ImageFilterButton
             android:id="@+id/btn_edit"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:background="@drawable/btn_rounded"

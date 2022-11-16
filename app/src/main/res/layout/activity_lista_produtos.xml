@@ -10,9 +10,9 @@
     <View
         android:id="@+id/card_usuario"
         style="@style/card_usuario"
-        android:layout_width="380dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="@dimen/_293sdp"
+        android:layout_height="@dimen/_116sdp"
+        android:layout_marginTop="@dimen/_38sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -23,7 +23,8 @@
         android:textColor="@color/linen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:textSize="@dimen/_22ssp"
+        android:layout_marginStart="@dimen/_16sdp"
         android:text="Exemplo"
         app:layout_constraintStart_toStartOf="@+id/card_usuario"
         app:layout_constraintTop_toTopOf="@+id/card_usuario"
@@ -32,23 +33,23 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imgUser"
         style="@style/card_user"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="15dp"
+        android:layout_width="@dimen/_77sdp"
+        android:layout_height="@dimen/_77sdp"
+        android:layout_marginTop="@dimen/_19sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
         app:layout_constraintEnd_toEndOf="@+id/card_usuario"
         app:layout_constraintTop_toTopOf="@+id/card_usuario"
         tools:srcCompat="@tools:sample/avatars" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_produtos"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_width="@dimen/_315sdp"
+        android:layout_height="@dimen/_460sdp"
         android:layout_below="@id/card_usuario"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/_23sdp"
         tools:listitem="@layout/produto_item"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_usuario"/>
+        app:layout_constraintTop_toBottomOf="@id/card_usuario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
