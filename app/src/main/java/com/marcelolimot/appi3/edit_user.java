@@ -4,12 +4,17 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +22,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.lang.ref.WeakReference;
 import java.util.UUID;
 
 
@@ -74,13 +84,41 @@ public class edit_user extends AppCompatActivity {
             }
         });
 
+
+
         btn_upload = findViewById(R.id.btn_upload);
         btn_upload.setOnClickListener(view -> {
-            Intent intent  = new Intent();
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            intent.setType("image/*");
-            someActivityResultLauncher.launch(intent);
+
+            AlertDialog.Builder selecionaFoto = new AlertDialog.Builder(edit_user.this);
+            selecionaFoto.setTitle("Foto do Perfil");
+            selecionaFoto.setPositiveButton("Camera", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Intent intent = new Intent();
+                    intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
+                    someActivityResultLauncher2.launch(intent);
+                }
+            });
+
+            selecionaFoto.setNegativeButton("Galeria", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Intent intent  = new Intent();
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+                    intent.setType("image/*");
+                    someActivityResultLauncher.launch(intent);
+                }
+            });
+            selecionaFoto.create().show();
+
+
+            //Intent intent  = new Intent();
+            //intent.setAction(Intent.ACTION_GET_CONTENT);
+            //intent.setType("image/*");
+            //someActivityResultLauncher.launch(intent);
         });
+
+
 
         btn_salvar_img = findViewById(R.id.btn_salvar_img);
         btn_salvar_img.setOnClickListener(view ->{
@@ -184,13 +222,60 @@ public class edit_user extends AppCompatActivity {
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
                 if(result.getResultCode() == Activity.RESULT_OK){
-                    Log.i("Teste","selecionou a imagem");
+                    //Log.i("Teste","selecionou a imagem");
                     Uri uri = result.getData().getData();
                     img_selecionada = uri;
                     Glide.with(this).asBitmap().load(img_selecionada).into(img_view);
                     //img_view.setImageURI(uri);
                 }
             });
+
+    ActivityResultLauncher<Intent> someActivityResultLauncher2 = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if(result.getResultCode() == Activity.RESULT_OK){
+                    Bundle extras = result.getData().getExtras();
+                    Uri imageUri;
+                    //Intent data = result.getData();
+                    Bitmap imageBitmap = (Bitmap) extras.get("data");
+
+                    WeakReference<Bitmap> result1 =
+                            new WeakReference<>(Bitmap.createScaledBitmap(imageBitmap,
+                                    imageBitmap.getHeight(),
+                                    imageBitmap.getWidth(), false).copy(
+                                    Bitmap.Config.RGB_565, true)
+                            );
+
+                    Bitmap bm=result1.get();
+                    imageUri = saveImage(bm, edit_user.this);
+
+                    img_selecionada = imageUri;
+                    img_view.setImageURI(imageUri);
+
+                    //Log.d("Tipo de dado", "");
+                }
+            });
+
+
+    private Uri saveImage(Bitmap image, Context context) {
+        File imagesFolder = new File(context.getExternalFilesDir("images"),"images");
+        Uri uri=null;
+        try{
+            imagesFolder.mkdirs();
+            File file = new File(imagesFolder, "imagem.jpg");
+            FileOutputStream stream = new FileOutputStream(file);
+            image.compress(Bitmap.CompressFormat.JPEG,100,stream);
+            stream.flush();
+            stream.close();
+            uri= FileProvider.getUriForFile(getApplicationContext(),BuildConfig.APPLICATION_ID+".provider",file);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return uri;
+    }
 
 
 }

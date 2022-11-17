@@ -1,11 +1,15 @@
 package com.marcelolimot.appi3
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -33,6 +37,14 @@ class MainActivity : AppCompatActivity() {
         val btnLogin =binding.btnLogin
         val lblCriar= binding.lblCriar
         val txtSenha = binding.txtsenha
+
+
+        if (ContextCompat.checkSelfPermission(
+                this@MainActivity, Manifest.permission.CAMERA
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(this@MainActivity, arrayOf(Manifest.permission.CAMERA), 101)
+        }
 
 
 

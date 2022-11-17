@@ -32,4 +32,23 @@
     <string name="descProduto">Descrição:</string>
     <string name="salvarImg">Salvar Imagem</string>
 
+
+    <string name="entrar">Entrar</string>
+    <string name="editar">Editar</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="atualizar">Atualizar</string>
+    <string name="sair">Sair</string>
+    <string name="criarconta">Criar Conta</string>
+    <string name="imagemproduto">Imagem do Produto</string>
+    <string name="cartaousuario">Cartao do Usuario</string>
+    <string name="fotousuario">Foto do Usuario</string>
+    <string name="nomeusuario">Nome do Usuario</string>
+    <string name="uploadfoto">Upload de foto</string>
+    <string name="listaGrafico">Lista com os dados em porcentagem dos produtos cadastrados</string>
+    <string name="listaProduto">Lista com os produtos cadastrados</string>
+    <string name="grafico">Grafico com a porcentagem dos produtos cadastrados</string>
+    <string name="adicionarProduto">Adicionar novo produto</string>
+    <string name="listarProdutos">Listar produtos</string>
+    <string name="abrirGrafico">Abrir Grafico</string>
+    <string name="atualizarFoto">Atualizar Foto no sistema</string>
 </resources>

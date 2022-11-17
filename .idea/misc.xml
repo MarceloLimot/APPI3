@@ -55,16 +55,16 @@
         <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/drawable/ic_report.xml" value="0.148" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/drawable/ic_sair.xml" value="0.168" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/drawable/input_corner_radius.xml" value="0.2765" />
-        <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_cad_produto.xml" value="0.3338541666666667" />
-        <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_cadastro.xml" value="0.1" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_cad_produto.xml" value="0.22" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_cadastro.xml" value="0.22" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_configuracoes_usuario.xml" value="0.34427083333333336" />
-        <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_grafico.xml" value="0.33" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_grafico.xml" value="0.18" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_grafico_produto.xml" value="0.3625" />
-        <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_lista_produtos.xml" value="0.33" />
-        <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_menu.xml" value="0.3338541666666667" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_lista_produtos.xml" value="0.25" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_menu.xml" value="0.22" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_teste.xml" value="0.25" />
-        <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_user_config.xml" value="0.3453125" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/activity_user_config.xml" value="0.22" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/grafico_item.xml" value="0.25" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/produto_item.xml" value="0.33" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/APPI3/APPI3/app/src/main/res/layout/user_config.xml" value="0.34427083333333336" />
@@ -96,12 +96,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.3625" />
-      </ProjectState>
-    </option>
   </component>
 </project>

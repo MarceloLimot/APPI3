@@ -12,10 +12,11 @@
         style="@style/card_usuario"
         android:layout_width="@dimen/_293sdp"
         android:layout_height="@dimen/_116sdp"
-        android:layout_marginTop="@dimen/_38sdp"
+        android:layout_marginTop="@dimen/_40sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/cartaousuario"/>
 
     <TextView
         android:id="@+id/txtUsuario"
@@ -28,7 +29,8 @@
         android:text="Exemplo"
         app:layout_constraintStart_toStartOf="@+id/card_usuario"
         app:layout_constraintTop_toTopOf="@+id/card_usuario"
-        app:layout_constraintBottom_toBottomOf="@+id/card_usuario"/>
+        app:layout_constraintBottom_toBottomOf="@+id/card_usuario"
+        android:contentDescription="@string/nomeusuario"/>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imgUser"
@@ -39,17 +41,22 @@
         android:layout_marginEnd="@dimen/_15sdp"
         app:layout_constraintEnd_toEndOf="@+id/card_usuario"
         app:layout_constraintTop_toTopOf="@+id/card_usuario"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/fotousuario"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_produtos"
         android:layout_width="@dimen/_315sdp"
-        android:layout_height="@dimen/_460sdp"
+        android:layout_height="@dimen/_420sdp"
         android:layout_below="@id/card_usuario"
-        android:layout_marginTop="@dimen/_23sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintVertical_bias="1"
         tools:listitem="@layout/produto_item"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_usuario" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_usuario"
+        android:contentDescription="@string/listaProduto"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

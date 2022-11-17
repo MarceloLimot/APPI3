@@ -79,12 +79,6 @@ public class teste extends AppCompatActivity {
 
         IniciarComponentes();
 
-        if (ContextCompat.checkSelfPermission(teste.this
-                , Manifest.permission.CAMERA) != PackageManager
-                .PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(teste.this,
-                    new String[]{Manifest.permission.CAMERA}, 101);
-        }
 
         btn_upload = findViewById(R.id.btn_upload);
         btn_upload.setOnClickListener(view -> {
