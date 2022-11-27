@@ -90,7 +90,9 @@ public class edit_user extends AppCompatActivity {
         btn_upload.setOnClickListener(view -> {
 
             AlertDialog.Builder selecionaFoto = new AlertDialog.Builder(edit_user.this);
+            selecionaFoto.setIcon(R.drawable.ic_foto);
             selecionaFoto.setTitle("Foto do Perfil");
+            selecionaFoto.setMessage("Selecione o local para enviar a foto:");
             selecionaFoto.setPositiveButton("Camera", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {

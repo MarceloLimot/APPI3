@@ -17,6 +17,9 @@ public class produtos {
     private String desc;
     private String userCad;
 
+    public produtos(int i, String produtoTeste, int i1, String s, String s1, String produto_para_teste, String ibqXYlDVeYMm4FHJHcx4xdbFprt2) {
+    }
+
     public String getUserCad() {
         return userCad;
     }
@@ -79,6 +82,22 @@ public class produtos {
         private String quantidade;
         private String valor;
         private String imgUrl;
+    }
+
+    public boolean validaCod(){
+        return this.cod != null;
+    }
+
+    public boolean validaNome(){
+        return this.nome != null;
+    }
+
+    public boolean validaQtd(){
+        return this.qtd != null;
+    }
+
+    public boolean validaValor(){
+        return this.qtd != null;
     }
 
 }

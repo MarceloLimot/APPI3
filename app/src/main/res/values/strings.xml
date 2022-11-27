@@ -51,4 +51,8 @@
     <string name="listarProdutos">Listar produtos</string>
     <string name="abrirGrafico">Abrir Grafico</string>
     <string name="atualizarFoto">Atualizar Foto no sistema</string>
+
+    <string name="nome">Nome</string>
+    <string name="email">E-mail</string>
+    <string name="senha">senha</string>
 </resources>

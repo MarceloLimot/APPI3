@@ -14,9 +14,6 @@
         android:background="@drawable/gradient_backgroud"
         tools:context=".teste">
 
-
-
-
         <View
             android:id="@+id/view_card"
             style="@style/ContainerComponents"
@@ -26,7 +23,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgUser"
@@ -46,7 +42,6 @@
             app:layout_constraintEnd_toEndOf="@+id/imgUser"
             android:contentDescription="@string/uploadfoto"/>
 
-
         <TextView
             android:id="@+id/txtDados"
             style="@style/textCadastro"
@@ -60,13 +55,11 @@
             app:layout_constraintTop_toBottomOf="@+id/imgUser"
             app:layout_constraintVertical_bias="0.29" />
 
-
-
         <EditText
             android:id="@+id/inputNome"
             style="@style/txtCadastro"
             android:layout_marginTop="20dp"
-            android:hint="Nome"
+            android:hint="@string/nome"
             app:layout_constraintBottom_toTopOf="@+id/inputEmail"
             app:layout_constraintEnd_toEndOf="@+id/view_card"
             app:layout_constraintStart_toStartOf="@+id/view_card"
@@ -76,8 +69,9 @@
         <EditText
             android:id="@+id/inputEmail"
             style="@style/txtCadastro"
-            android:drawableRight="@drawable/ic_email"
-            android:hint="E-mail"
+            android:drawableEnd="@drawable/ic_email"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
             android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="@+id/view_card"
             app:layout_constraintStart_toStartOf="@+id/view_card"
@@ -86,8 +80,8 @@
         <EditText
             android:id="@+id/inputSenha"
             style="@style/txtQuantidade"
-            android:drawableRight="@drawable/ic_olho"
-            android:hint="Senha"
+            android:drawableEnd="@drawable/ic_olho"
+            android:hint="@string/senha"
             android:inputType="textPassword"
             android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="@+id/view_card"
@@ -113,7 +107,6 @@
             app:layout_constraintTop_toBottomOf="@+id/inputSenha"
             app:layout_constraintEnd_toEndOf="@+id/view_card"
             android:contentDescription="@string/sair"/>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
