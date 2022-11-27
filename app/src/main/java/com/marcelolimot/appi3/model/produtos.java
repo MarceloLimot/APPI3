@@ -17,7 +17,9 @@ public class produtos {
     private String desc;
     private String userCad;
 
-    public produtos(int i, String produtoTeste, int i1, String s, String s1, String produto_para_teste, String ibqXYlDVeYMm4FHJHcx4xdbFprt2) {
+    public produtos(int cod, String nome, int qtd, String valor
+            , String imgUrl, String desc
+            , String userCad) {
     }
 
     public String getUserCad() {
@@ -97,7 +99,11 @@ public class produtos {
     }
 
     public boolean validaValor(){
-        return this.qtd != null;
+        return this.valor != null;
+    }
+
+    public boolean validaUserCad(){
+        return this.userCad != null;
     }
 
 }
